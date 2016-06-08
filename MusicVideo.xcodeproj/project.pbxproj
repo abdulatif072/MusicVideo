@@ -14,6 +14,7 @@
 		E79F16F51D059EB400857ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79F16F31D059EB400857ACE /* LaunchScreen.storyboard */; };
 		E79F17001D059EB400857ACE /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79F16FF1D059EB400857ACE /* MusicVideoTests.swift */; };
 		E79F170B1D059EB400857ACE /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79F170A1D059EB400857ACE /* MusicVideoUITests.swift */; };
+		E79F171D1D0629FC00857ACE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79F171C1D0629FC00857ACE /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E79F17061D059EB400857ACE /* MusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79F170A1D059EB400857ACE /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		E79F170C1D059EB400857ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79F171C1D0629FC00857ACE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		E79F171B1D05A7BE00857ACE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E79F171C1D0629FC00857ACE /* APIManager.swift */,
 				E79F16EA1D059EB400857ACE /* AppDelegate.swift */,
 			);
 			name = Model;
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79F171D1D0629FC00857ACE /* APIManager.swift in Sources */,
 				E79F16ED1D059EB400857ACE /* ViewController.swift in Sources */,
 				E79F16EB1D059EB400857ACE /* AppDelegate.swift in Sources */,
 			);
