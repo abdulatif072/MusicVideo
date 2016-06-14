@@ -63,16 +63,48 @@ class MusicVideoTVC: UITableViewController {
     {
         
         switch reachabilityStatus {
-        case NOACCESS : view.backgroundColor = UIColor.redColor()
+        case NOACCESS :
+           
+           let alert = UIAlertController(title: "No Internet Access", message: "need Wifi", preferredStyle: UIAlertControllerStyle.Alert)
+            
+        let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        let delete = UIAlertAction(title: "delete", style: UIAlertActionStyle.Destructive, handler: nil)
+         
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            alert.addAction(delete)
+
+          self.presentViewController(alert, animated: true, completion: nil)
+
+            
+            
         //displayLabel.text = "No Internet"
-        case WIFI : view.backgroundColor = UIColor.greenColor()
+        //case WIFI : view.backgroundColor = UIColor.greenColor()
         //displayLabel.text = "Reachable with WIFI"
-        case WWAN : view.backgroundColor = UIColor.yellowColor()
+        //case WWAN : view.backgroundColor = UIColor.yellowColor()
         //displayLabel.text = "Reachable with Cellular"
-        default:return
+        default:
+            runApi()
+            view.backgroundColor = UIColor.greenColor()
+
+        if videos.count>1{
+
+         runApi()
+            }
+            
+        else {
+            print("Error Internet")
+            }
         }
         
+        
     }
+    func runApi () {
+        let api = APIManager()
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
+    }
+
     
     // Is called just as the object is about to be deallocated
     deinit

@@ -61,7 +61,7 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     {
         
         switch reachabilityStatus {
-        case NOACCESS : view.backgroundColor = UIColor.redColor()
+        case NOACCESS :view.backgroundColor = UIColor.redColor()
         displayLabel.text = "No Internet"
         case WIFI : view.backgroundColor = UIColor.greenColor()
         displayLabel.text = "Reachable with WIFI"
