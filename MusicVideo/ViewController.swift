@@ -55,7 +55,6 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         //            let video = videos[i]
         //            print("\(i) name = \(video.vName)")
         //        }
-        
     }
     
     func reachabilityStatusChanged()
